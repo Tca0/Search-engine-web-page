@@ -43,14 +43,23 @@ resultsBtn.addEventListener('click', (e) => {
     resultsContainer.innerHTML = ""
     console.log(searchInput.value);
     const searchFor = searchInput.value;
-    getSearchResults(searchFor)
+    if(!searchFor) {
+        window.alert('type somthing to search:')
+    } else {
+        getSearchResults(searchFor)
+    }
 })
 
 
 luyckyResults.addEventListener('click', () => {
-    console.log(res);
-    const randomResults = Math.floor(Math.random()*res.length)
-    console.log(res[randomResults].url);
-    window.open(res[randomResults].url, '_blank').focus();
+    if(!res) {
+        window.alert('search for something first')
+    } else {
+        console.log(res);
+        const randomResults = Math.floor(Math.random()*res.length)
+        console.log(res[randomResults].url);
+        window.open(res[randomResults].url, '_blank').focus();
+    }
+    
 
 })
