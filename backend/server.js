@@ -9,5 +9,10 @@ app.get('/', (req,res) => {
     res.status(200).send("search engine app running")
 })
 
+app.get('/search/:query', (req, res) => {
+    console.log(req.params)
+    res.status(200).send(`You searched for '${req.params.query}'`)
+})
+
 module.exports = app
 
