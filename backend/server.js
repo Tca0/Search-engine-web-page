@@ -3,20 +3,12 @@ const express = require('express')
 const app = express()
 let cors = require('cors')
 app.use(cors())
-const searchByKeyWords = require('./helpers')
-
-const compareTitle = require('./controllers/routes')
+const {searchByKeyWords, compareTitle} = require('./helpers')
 
 app.get('/', (req,res) => {
     console.log("hello app from app");
     res.status(200).send("search engine app running")
 })
-
-//app.get('/search/:query', (req, res) => {
-    //const arr = compareTitle(req.params.query)
-    //console.log(arr)
-    //res.status(200).send(`You searched for '${req.params.query}'`)
-//})
 
 app.get('/search/:str', (req, res) => {
     const searchStr = req.params.str
@@ -24,6 +16,10 @@ app.get('/search/:str', (req, res) => {
     const results = searchByKeyWords(searchStr)
     console.log("results from app");
     console.log(results);
+
+    const arr = compareTitle(searchStr)
+    //console.log(arr)
+
     res.end()
 })
 

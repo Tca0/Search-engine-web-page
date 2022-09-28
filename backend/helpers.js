@@ -1,4 +1,5 @@
-const db = require('./data/dataBase')
+const db = require('./data/database')
+
 let matchingSearchByWords = []
 function searchByKeyWords(searchStr) {
     // console.log(`dataBase :`);
@@ -36,4 +37,26 @@ function searchByKeyWords(searchStr) {
     return matchingSearchByWords
 }
 
-module.exports = searchByKeyWords
+function compareTitle(query){
+    const words = query.split(' ')
+    const matches = []
+
+    db.forEach((element, index) => {
+        let count = 0
+        const titleArr = element.title.split(' ')
+
+        // compare data title to each word in search query
+        words.forEach(word => {
+            if(titleArr.includes(word))
+                count += 1
+        })
+
+        if(count > 0){
+            matches.push({index, count})
+        }
+    })
+
+    return matches
+}
+
+module.exports = {searchByKeyWords, compareTitle}
