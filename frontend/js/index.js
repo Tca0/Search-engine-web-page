@@ -2,17 +2,16 @@ const ip = 'http://localhost:3000'
 
 const searchInput = document.getElementById('searchInput')
 const resultsBtn = document.getElementById('apiResults')
-// const resultsBtn2 = document.getElementById('results1')
+const luyckyResults = document.getElementById('luyckyResults')
 const resultsContainer = document.querySelector('.results')
-console.log(resultsContainer);
 
-console.log(searchInput.value);
+let res
 
 // fetch data from api
 const getSearchResults = async (str) => {
     const rawData = await fetch(`${ip}/search/${str}`)
     // console.log(rawData);
-    const res = await rawData.json()
+    res = await rawData.json()
     console.log(res);
     res.forEach(element => {
         // creating a div container for individual results
@@ -45,4 +44,13 @@ resultsBtn.addEventListener('click', (e) => {
     console.log(searchInput.value);
     const searchFor = searchInput.value;
     getSearchResults(searchFor)
+})
+
+
+luyckyResults.addEventListener('click', () => {
+    console.log(res);
+    const randomResults = Math.floor(Math.random()*res.length)
+    console.log(res[randomResults].url);
+    window.open(res[randomResults].url, '_blank').focus();
+
 })
