@@ -196,7 +196,61 @@ const data = [
         description: "BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.",
         url: "https://www.bbc.co.uk/news",
         tags: ["bbc", "news", "business", "entertainment", "technology"]
-    }
+    },
+    {
+        titel : "fun cat",
+        tags : ["pets", "pet", "animal", "fuuny" ,"cats","kitten"],
+        description: "6A site for funny cats",
+        url: "https://mashable.com/archive/cat-websites"
+    },
+    {
+        titel : "the 7 bbest cat-centric time-wasters on the internet",
+        tags : ["pets", "pet", "animal", "fuuny" ,"cats","kitten"],
+        description: "17 Sept 2013 — 1. Catleidoscope · 2. LOLCats · 3. Cat Bounce · 4. Cat Flakes · 5. Bat Cat · 6. Circle the Cat · 7. The A to Z list of cat memes.",
+        url: "https://www.catster.com/lifestyle/internet-cat-time-wasters"
+    },
+    {
+        titel : "kitten",
+        tags : ["pets", "pet", "animal", "wikipedia" ,"cats","kitten"],
+        description: "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are totally dependent on their mothers for survival.",
+        url: "https://en.wikipedia.org/wiki/Kitten"
+    },
+    {
+        titel : "dog",
+        tags : ["pets", "pet", "animal", "wikipedia" ,"dog","dogs"],
+        description: "The dog or domestic dog is a domesticated descendant of the wolf. The dog is derived from an ancient, extinct wolf, and the modern wolf is the dog's nearest ...",
+        url: "https://en.wikipedia.org/wiki/Dog"
+    },
+    {
+        titel : "cat",
+        tags : ["pets", "pet", "animal", "wikipedia" ,"cats","felis"],
+        description: "The cat (Felis catus) is a domestic species of small carnivorous mammal. ... It is the only domesticated species in the family Felidae and is sometimes referred ...",
+        url: "https://en.wikipedia.org/wiki/Cat"
+    },
+    {
+        titel : "puppy ",
+        tags : ["pets", "pet", "animal", "wikipedia" ,"puppy","puppies"],
+        description: "A puppy is a juvenile dog. Some puppies can weigh 1-1.5 kg (2.2-3.3 lb), while larger ones can weigh up to 7–11 kg (15–24 lb). All healthy puppies grow ...",
+        url: "https://en.wikipedia.org/wiki/Puppy"
+    },
+    {
+        titel : "kitten suppliese",
+        tags : ["pets", "pet", "animal", "supplies" ,"cats","kitten", "kitten food","kitten litter", "kitten beds", "kitten toys"],
+        description: "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are totally dependent on their mothers for survival.",
+        url: "https://www.petsathome.com/shop/en/pets/cat/kitten"
+    },
+    {
+        titel : "cats suppliese",
+        tags : ["pets", "pet", "animal", "supplies" ,"cats","kitten", "cat food","cat litter", "cat beds", "cat toys"],
+        description: "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are totally dependent on their mothers for survival.",
+        url: "https://www.petsathome.com/shop/en/pets/cat"
+    },
+    {
+        titel : "pets suppliese",
+        tags : ["pets", "pet", "animal", "supplies","dogs","pops" ,"cats","kitten", "pet food","pet litter", "pet beds", "pet toys"],
+        description: "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are totally dependent on their mothers for survival.",
+        url: "https://www.petsathome.com/shop/en/pets"
+    },
 ]
 
 module.exports = { data }
