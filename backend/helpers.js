@@ -3,6 +3,7 @@ const db = require('./data/database')
 
 let matchingSearchByWords = []
 function searchByKeyWords(searchStr) {
+    matchingSearchByWords = []
     // console.log(`dataBase :`);
     // console.log(db);
     console.log("----- Search by tags function -----\n");
