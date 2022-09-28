@@ -251,6 +251,66 @@ const data = [
         description: "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are totally dependent on their mothers for survival.",
         url: "https://www.petsathome.com/shop/en/pets"
     },
+    {
+        titel : "best 10 london attractions 2022",
+        tags : ["city", "london", "london eye", "tourism","capital city", "uk", "places", "to go"],
+        description: "Best 10 London attractions 2022 · The London Eye · Madame Tussauds London · Warner Bros. Studio Tour London · Buckingham Palace · Tower of London · Emirates",
+        url: "https://www.visitlondon.com/things-to-do/sightseeing/london-attraction/top-ten-attractions"
+    },
+    {
+        titel : "25 best things to do in london england",
+        tags : ["city", "london", "tourism","capital city", "things", "best", "uk", "places", "to go", "england"],
+        description: "25 Best Things To Do In London (England) ; 2. Westminster. Westminster Abbey Source: Lukasz Pajor / shutterstock Westminster Abbey · 3. Camden ; 4. London Eye.",
+        url: "https://www.thecrazytourist.com/25-best-things-to-do-in-london/"
+    },
+    {
+        titel : "Best places to visit in Spain: 16 top destinations - The Times",
+        tags : ["travel", "tourism","spain", "things", "best", "barcelona", "places", "to go", "hoilday"],
+        description: "places to go in spain and enjoy your hoilday",
+        url: "https://www.thetimes.co.uk/travel/destinations/europe/spain/holidays-in-spain-barcelona-seville-andalucia"
+    },
+    {
+        titel : "Explore Spain Holidays and the Best Places to Visit",
+        tags : ["travel", "tourism","spain", "best", "barcelona", "places","Madrid", "to go", "hoilday", "Malaga"],
+        description: "Explore the trendiest destinations · Madrid, Spain · Seville, Spain · Barcelona, Spain · Malaga, Spain · Bilbao, Spain · San sebastian, Spain · Valencia, Spain · Ibiza, ...",
+        url: "https://www.101holidays.co.uk/holiday-destinations-in-spain/"
+    },
+    {
+        titel : "Top 10 Best Holiday Destinations & Resorts in Spain",
+        tags : ["travel", "tourism","spain", "best", "barcelona", "places","Madrid", "to go", "hoilday", "Malaga"],
+        description: "1 Jan 2022 — Top Holiday Resorts & Destinations in Spain · Benidorm – Costa Blanca · Playa del Ingles – Gran Canaria, Canary Islands · Magaluf – Majorca,",
+        url: "https://spainist.com/top-10-best-holiday-resorts-destinations-in-spain/"
+    },
+    {
+        titel : "Where to go for holidays with kids in Spain: Best destinations",
+        tags : ["travel", "tourism","spain","family", "best", "barcelona", "places","Madrid", "to go", "hoilday", "Malaga"],
+        description: "Want to escape the daily grind and routine? Who doesn't think about this once in a while, especially when planning a family holiday? Discover the answers to the questions you ....",
+        url: "https://www.spain-holiday.com/Spain/articles/family-holidays-with-children-in-spain"
+    },
+    {
+        titel : "Spain hoilday family",
+        tags : ["travel", "tourism","spain","family", "best", "barcelona", "places","Madrid", "to go", "hoilday", "Malaga"],
+        description: "There is no doubt that in order to provide children with the best holiday can be a challenge. Finding accommodation in an ideal location, taking into consideration amusement parks and making sure that children will be satisfied with the local foo....",
+        url: "https://www.spain-holiday.com/Spain/articles/family-holidays-with-children-in-spain"
+    },
+    {
+        titel : "The 5 Best Family Holiday Destination in Spain | Other Shores",
+        tags : ["travel", "tourism","spain","family", "best", "barcelona", "tenerife","places", "to go", "hoilday"],
+        description: "31 Dec 2021 — The Best Family Holiday Destinations In Spain · Tenerife · Ibiza · Marbella · Mallorca · Lanzarote ...",
+        url: "https://www.inspiringtravel.co.uk/other-shores/explore/best-family-holiday-destinations-spain/"
+    },
+    {
+        titel : "Best European destinations for a family holiday",
+        tags : ["travel", "tourism","european","family", "best","places", "to go", "hoilday"],
+        description: "You want to discover Europe with your family and you think that big cities are not for you? We have selected the...",
+        url: "https://www.europeanbestdestinations.com/best-of-europe/best-european-destinations-for-a-family-holiday/"
+    },
+    {
+        titel : "10 best holiday destinations for families in 2022",
+        tags : ["travel", "tourism","family", "best","places", "to go", "with kids", "hoilday"],
+        description: "Family holidays are always special – you get to spend quality time together (a rarity if you have teens!) and make unforgettable memories of ....",
+        url: "https://www.oliverstravels.com/blog/10-best-holiday-destinations-families-2022/"
+    },
 ]
 
 module.exports = { data }
