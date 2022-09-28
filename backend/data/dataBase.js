@@ -91,7 +91,7 @@ const data = [
     },
     {
         titel : "a step-by-step guide to cooking an authentic indian curry",
-        tags : ["how", "to", "make", "curry", "traditional" ,"recipes","indian",, "chicken"],
+        tags : ["how", "to", "make", "curry", "traditional" ,"recipes","indian", "chicken"],
         description: "640 g chicken thigh fillets · 2 tablespoon olive oil · 2 onions cut into chunks · 2 red peppers seeded and cut into chunks · 2 cloves ...",
         url: "https://www.recipesmadeeasy.co.uk/spicy-chicken-curry/"
     },
@@ -313,4 +313,4 @@ const data = [
     },
 ]
 
-module.exports = { data }
+module.exports = data
