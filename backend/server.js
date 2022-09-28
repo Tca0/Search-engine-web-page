@@ -12,18 +12,16 @@ app.get('/', (req,res) => {
     res.status(200).send("search engine app running")
 })
 
-//app.get('/search/:query', (req, res) => {
-    //const arr = compareTitle(req.params.query)
-    //console.log(arr)
-    //res.status(200).send(`You searched for '${req.params.query}'`)
-//})
-
 app.get('/search/:str', (req, res) => {
     const searchStr = req.params.str
     console.log(`***** main app ****\n hitting sreach for: \n ${searchStr}`);
     const results = searchByKeyWords(searchStr)
     console.log("results from app");
     console.log(results);
+
+    //const arr = compareTitle(searchStr)
+    //console.log(arr)
+
     res.end()
 })
 
