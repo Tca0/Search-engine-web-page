@@ -41,7 +41,7 @@ function compareTitle(query){
     const words = query.split(' ')
     const matches = []
 
-    data.forEach((element, index) => {
+    db.forEach((element, index) => {
         let count = 0
         const titleArr = element.title.split(' ')
 

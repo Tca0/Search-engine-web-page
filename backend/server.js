@@ -3,9 +3,7 @@ const express = require('express')
 const app = express()
 let cors = require('cors')
 app.use(cors())
-const searchByKeyWords = require('./helpers')
-
-const compareTitle = require('./controllers/routes')
+const {searchByKeyWords, compareTitle} = require('./helpers')
 
 app.get('/', (req,res) => {
     console.log("hello app from app");
@@ -19,7 +17,7 @@ app.get('/search/:str', (req, res) => {
     console.log("results from app");
     console.log(results);
 
-    //const arr = compareTitle(searchStr)
+    const arr = compareTitle(searchStr)
     //console.log(arr)
 
     res.end()
