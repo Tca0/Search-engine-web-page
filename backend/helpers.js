@@ -6,10 +6,11 @@ let matchingSearchByWords = []
 
 
 const deleteObjectKey = (arrayOfobjects) => { 
+    let arrayOfResults = []
     arrayOfobjects.forEach(object => {
-        delete object['count']
+        arrayOfResults.push(object.element)
     })
-    return arrayOfobjects
+    return arrayOfResults
 }
 
 const compareTwoArraysOfWords = (titleWords,arrayOfWords,count) => {
@@ -37,7 +38,7 @@ function searchByKeyWords(searchStr) {
             matchingSearchByWords.push({element,count})
     })
     matchingSearchByWords.sort((a,b) => b.count - a.count)
-    console.log(`array after sorting \n`, matchingSearchByWords);
+    // console.log(`array after sorting \n`, matchingSearchByWords);
     matchingSearchByWords = deleteObjectKey(matchingSearchByWords)
     return matchingSearchByWords
 }

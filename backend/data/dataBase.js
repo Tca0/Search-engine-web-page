@@ -2,7 +2,7 @@ const data = [
     {
         title: "easy chicken curry",
         description: "28 Sept 2020 — Seal the chicken in a pan with a little oil. · Add chopped onion and cook for 5 minutes to soften. · Add in garlic, ginger, curry powder, ground ",
-        url: "kitchensanctuary.com/easy-chicken-curry/",
+        url: "https://www.kitchensanctuary.com/easy-chicken-curry",
         tags: ["how", "to", "make", "curry", "recipes","indian", "food", "chicken"]
     },
     {
