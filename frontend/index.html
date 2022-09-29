@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/explorer.png" type="image/x-icon">
     <title>Search Engine</title>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
+    <main>
+        <!-- <h1>Logo</h1> -->
+        <img src="./images/serch.png" alt="search Icon">
+        <form>
+            <input id="searchInput" type="search" placeholder="Enter search here" autofocus>
+            <input id="apiResults" type="button" value="Submit Search">
+            <input id="luyckyResults" type="button" value="I'm Feeling Lucky">
+        </form>
+        <div class="results"></div>
+    </main>
 </body>
 </html>
