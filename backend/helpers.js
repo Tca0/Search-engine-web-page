@@ -1,55 +1,59 @@
 const db = require('./data/database')
 
 
+
 let matchingSearchByWords = []
+
+
+const deleteObjectKey = (arrayOfobjects) => { 
+    arrayOfobjects.forEach(object => {
+        delete object['count']
+    })
+    return arrayOfobjects
+}
+
+const compareTwoArraysOfWords = (titleWords,arrayOfWords,count) => {
+    titleWords.forEach(titleWord => {
+        arrayOfWords.forEach(word => {
+            if (titleWord.toLowerCase() == word.toLowerCase())
+                count++
+        })
+    })
+    return count
+}
+
 function searchByKeyWords(searchStr) {
     matchingSearchByWords = []
-    console.log("----- Search by tags function -----\n");
     // loop through all data indexes
     // compare the tags array with the searchStr words
     // if searchStr includes one of the tages then increase numberOfMatches 
-    db.forEach((element, index) => {
+    db.forEach(element => {
         // split the search sentence and compare it with tags
-        const words = searchStr.split(" ")
-        let numberOfMatches = 0
-        element.tags.forEach(tag => {
-            words.forEach(word => {
-                if(tag == word.toLowerCase()) {
-                    numberOfMatches++
-                }
-            })
-        })
+        const searchWords = searchStr.split(" ")
+        let count = 0
+        count = compareTwoArraysOfWords(searchWords, element.tags,0)
         // if there is a keywords matching then pushed to matchingSearchByWords array
-        if(numberOfMatches>0) {
-            matchingSearchByWords.push({
-                index,
-                "matchs": numberOfMatches
-            })
-        }
+        if(count>0)
+            matchingSearchByWords.push({element,count})
     })
-    matchingSearchByWords.sort((a,b) => b.matchs - a.matchs)
+    matchingSearchByWords.sort((a,b) => b.count - a.count)
+    console.log(`array after sorting \n`, matchingSearchByWords);
+    matchingSearchByWords = deleteObjectKey(matchingSearchByWords)
     return matchingSearchByWords
 }
 
-function compareTitle(query){
+function compareTitle(query) {
     const words = query.split(' ')
-    const matches = []
+    let matches = []
 
-    db.forEach((element, index) => {
+    db.forEach(element => {
         let count = 0
         const titleArr = element.title.split(' ')
-
-        // compare data title to each word in search query
-        words.forEach(word => {
-            if(titleArr.includes(word))
-                count += 1
-        })
-
-        if(count > 0){
-            matches.push({index, count})
-        }
+        count = compareTwoArraysOfWords(words, titleArr, 0)
+        if(count > 0)
+            matches.push({element, count});
     })
-
+    matches = deleteObjectKey(matches)
     return matches
 }
 
