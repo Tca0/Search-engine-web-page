@@ -15,7 +15,7 @@ app.get('/search/:str', (req, res) => {
     const searchStr = req.params.str
     console.log(`***** main app ****\n hitting sreach for: \n ${searchStr}`);
     // search by title key words
-    const titleMatchs = compareTitle(searchStr)
+    let titleMatchs = compareTitle(searchStr)
     console.log("results by title");
     console.log(titleMatchs)
     // search by tags key words
@@ -24,14 +24,15 @@ app.get('/search/:str', (req, res) => {
     console.log(tagMatchs);
     let results = []
     titleMatchs.forEach(ele => {
-        console.log(ele.index);
+        // console.log(ele.index);
         results.push(db[ele.index])
     })
     tagMatchs.forEach(ele => {
-        console.log(ele.index);
+        // console.log(ele.index);
         results.push(db[ele.index])
     })
-    console.log(`The final response is: \n ${results}`);
+    console.log(`The final response is:`);
+    console.log(results);
     res.status(202).send(results)
 })
 
